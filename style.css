@@ -67,6 +67,33 @@ h1{
     top: 5vmin;
     height: 25vmin;
 }
+.scoreboard{
+    margin: 1rem auto 2rem auto;
+    display: flex;
+    justify-content: center;
+    gap: 1.2rem;
+    color: rgb(219, 219, 100);
+    font-weight: bold;
+    letter-spacing: 0.05em;
+}
+.score-item{
+    background: rgba(0, 0, 0, 0.15);
+    border: 2px solid rgb(219, 219, 100);
+    border-radius: 1rem;
+    padding: 0.7rem 1.2rem;
+    min-width: 90px;
+    box-shadow: 0 0.6rem 1rem rgba(0,0,0,0.35);
+}
+.score-item .label{
+    display: block;
+    font-size: 0.95rem;
+    color: beige;
+}
+.score-item .value{
+    display: block;
+    font-size: 1.6rem;
+    margin-top: 0.2rem;
+}
 .footer{
     margin-top: 3vmin;
 }

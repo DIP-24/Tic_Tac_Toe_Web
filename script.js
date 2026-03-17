@@ -3,10 +3,22 @@ let reset = document.querySelector("#reset");
 let newGame = document.querySelector("#newGame");
 let score = document.querySelector(".score");
 let msg = document.querySelector(".msg");
+const scoreXEl = document.querySelector("#score-x");
+const scoreOEl = document.querySelector("#score-o");
+const scoreDrawEl = document.querySelector("#score-draw");
 
 let enter = true;
 let moveCount = 0;
 let gameOver = false;
+let scoreX = 0;
+let scoreO = 0;
+let scoreDraw = 0;
+
+const updateScoreboard = () => {
+    scoreXEl.innerText = scoreX;
+    scoreOEl.innerText = scoreO;
+    scoreDrawEl.innerText = scoreDraw;
+};
 
 const showOverlay = (text) => {
     msg.innerText = text;
@@ -15,10 +27,18 @@ const showOverlay = (text) => {
 };
 
 let showWinner = (winner) => {
+    if(winner === "X"){
+        scoreX++;
+    } else if (winner === "O"){
+        scoreO++;
+    }
+    updateScoreboard();
     showOverlay(`${winner} won!`);
 };
 
 let showDraw = () => {
+    scoreDraw++;
+    updateScoreboard();
     showOverlay("It's a draw!");
 };
 
@@ -90,3 +110,6 @@ let resetGame = () => {
 
 reset.addEventListener("click",resetGame);
 newGame.addEventListener("click",resetGame);
+
+// initialize scoreboard text on load
+updateScoreboard();
