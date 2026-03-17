@@ -1,0 +1,108 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color: rgb(0, 92, 92);
+    text-align: center;
+}
+h1{
+    color: rgb(219, 219, 100);
+    font-size: clamp(2.4rem, 6vmin, 3.6rem);
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    display: inline-block;
+    padding: 0.6rem 1.2rem;
+    border-radius: 1rem;
+    background: linear-gradient(135deg, rgba(0,120,120,0.65), rgba(0,120,120,0.65));
+    margin-bottom: 1rem;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    text-align: center; 
+}
+.game{
+    height: 60vmin; 
+    width: 60vmin;
+    display: flex;
+    justify-content: center;
+    text-align: center; 
+    flex-wrap: wrap;
+    gap: 1.5vmin;
+}
+.box{
+    box-shadow: 0.5rem 0.2rem 0.5rem rgba(0, 0, 0, 0.5);
+    height: 18vmin;
+    width: 18vmin;
+    background-color: rgb(219, 219, 100);
+    color: brown;
+    font-size: 10vmin;
+    border-radius: 0.7rem;
+    border: 2px solid black;
+}
+.btn{
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 0.8rem 1.2rem 0.8rem 1.2rem;
+    border-radius: 1rem;
+    background-color: darkslategrey;
+    color: rgb(219, 219, 100);
+    border: 2px solid rgb(219, 219, 100);
+    letter-spacing: 0.05em;
+    box-shadow: 0 0.4rem 0.6rem rgba(0,0,0,0.4);
+    transition: transform 120ms ease, box-shadow 120ms ease, filter 120ms ease;
+}
+.btn:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 0.6rem 0.9rem rgba(0,0,0,0.55);
+    filter: brightness(1.05);
+}
+.btn:active{
+    transform: translateY(0);
+    box-shadow: 0 0.2rem 0.4rem rgba(0,0,0,0.35);
+}
+.Header{
+    position: relative;
+    top: 5vmin;
+    height: 25vmin;
+}
+.footer{
+    margin-top: 3vmin;
+}
+.msg{
+    color: rgb(43, 70, 70);
+    font-size: 5vmin;
+    margin-bottom: 1.4rem;
+}
+.hide{
+    display: none;
+}
+.score{
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+}
+.score.hide{
+    display: none;
+}
+.score-card{
+    background: rgb(219, 219, 100);
+    color: rgb(43, 70, 70);
+    border: 3px solid rgb(0, 92, 92);
+    border-radius: 1.2rem;
+    padding: 2.4rem 2.8rem;
+    box-shadow: 0 1.4rem 2rem rgba(0,0,0,0.35);
+    min-width: 40vmin;
+    transform: translateY(12px);
+    opacity: 0;
+    animation: pop 220ms ease-out forwards;
+}
+@keyframes pop{
+    from{opacity:0; transform: translateY(12px) scale(0.96);} 
+    to{opacity:1; transform: translateY(0) scale(1);} 
+}
