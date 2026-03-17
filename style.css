@@ -65,10 +65,10 @@ h1{
 .Header{
     position: relative;
     top: 5vmin;
-    height: 25vmin;
+    height: 15vmin;
 }
 .scoreboard{
-    margin: 1rem auto 2rem auto;
+    margin: 1.5rem auto 1.5rem auto;
     display: flex;
     justify-content: center;
 }
@@ -87,7 +87,7 @@ h1{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0.4rem 0;
+    padding: 0.3rem 0;
     border-bottom: 1px solid rgba(219,219,100,0.4);
 }
 .score-row:last-child{
